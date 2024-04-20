@@ -1,6 +1,6 @@
 import { Bs0SquareFill, Bs7SquareFill, BsArrowLeftRight, BsCircleFill, BsGripHorizontal, BsLine } from "react-icons/bs";
 
-const Home = ({ name, cardNumber, month, year, cvc, setName, setCardNumber, setMonth, setYear, setCvc }) => {
+const Home = ({ name, cardNumber, month, year, cvc, setName, setCardNumber, setMonth, setYear, setCvc, handleNameChange }) => {
     return (
         <main className="flex flex-row justify-center text-center bg-white h-[100vh] w-full">
             <section className="flex flex-row justify-center text-center w-full relative">
@@ -14,27 +14,62 @@ const Home = ({ name, cardNumber, month, year, cvc, setName, setCardNumber, setM
                     <form className="w-1/2 space-y-6">
                         <div className="flex flex-col text-start">
                             <label className="uppercase">card holder name</label>
-                            <input type="text" name="name" placeholder="e.g. Sophia Joseph" className="rounded-md px-2 border-2 border-gray-200 h-12" />
+                            <input 
+                                type="text" 
+                                name="name" 
+                                placeholder="e.g. Sophia Joseph" 
+                                className="rounded-md px-2 border-2 border-gray-200 h-12" 
+                                value={name}
+                                onChange={(e) => setName(e.target.value)}
+                            />
                         </div>
                         <div className="flex flex-col text-start">
                             <label className="uppercase">card number</label>
-                            <input type="text" name="name" placeholder="e.g. 1234 5678 9123 0000" className="rounded-md px-2 border-2 border-gray-200 h-12" />
+                            <input 
+                                type="text" 
+                                name="name" 
+                                placeholder="e.g. 1234 5678 9123 0000" 
+                                className="rounded-md px-2 border-2 border-gray-200 h-12"
+                                value={cardNumber}
+                                onChange={(e) => setCardNumber(e.target.value)}
+                            />
                         </div>
                         <div className="flex flex-row space-x-4">
                             <div className="flex flex-col text-start">
                                 <label className="uppercase">exp.date (mm/yy)</label>
                                 <div className="flex flex-row space-x-4">
                                     <div>
-                                        <input type="text" name="name" placeholder="mm" className="rounded-md px-2 border-2 border-gray-200 h-12 w-full uppercase" />
+                                        <input 
+                                            type="text" 
+                                            name="name" 
+                                            placeholder="mm" 
+                                            className="rounded-md px-2 border-2 border-gray-200 h-12 w-full uppercase"
+                                            value={month}
+                                            onChange={(e) => setMonth(e.target.value)} 
+                                        />
                                     </div>
                                     <div>
-                                        <input type="text" name="name" placeholder="yy" className="rounded-md px-2 border-2 border-gray-200 h-12 w-full uppercase" />
+                                        <input 
+                                            type="text" 
+                                            name="name" 
+                                            placeholder="yy" 
+                                            className="rounded-md px-2 border-2 border-gray-200 h-12 w-full uppercase" 
+                                            value={year}
+                                            onChange={(e) => setYear(e.target.value)}
+                                        />
                                     </div>
                                 </div>
                             </div>
                             <div className="flex flex-col text-start">
                                 <label className="uppercase">cvc</label>
-                                <input type="text" name="name" placeholder="e.g. 123" className="rounded-md px-2 border-2 border-gray-200 h-12" />
+                                <input 
+                                    type="text" 
+                                    name="name" 
+                                    placeholder="e.g. 123" 
+                                    className="rounded-md px-2 border-2 border-gray-200 h-12" 
+                                    value={cvc}
+                                    onChange={(e) => setCvc(e.target.value)}
+                                />
                             </div>
                         </div>
                         <div>

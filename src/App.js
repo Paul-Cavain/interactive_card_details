@@ -8,6 +8,10 @@ function App() {
   const [year, setYear] = useState('');
   const [cvc, setCvc] = useState('');
 
+  const handleNameChange = (e) =>{
+    
+  }
+
   return(
     <section>
       <Home 
@@ -21,6 +25,7 @@ function App() {
         setYear = {setYear}
         cvc = {cvc}
         setCvc = {setCvc}
+        handleNameChange = {handleNameChange}
 
       />
     </section>
