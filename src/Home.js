@@ -1,6 +1,6 @@
 import { Bs0SquareFill, Bs7SquareFill, BsArrowLeftRight, BsCircleFill, BsGripHorizontal, BsLine } from "react-icons/bs";
 
-const Home = () => {
+const Home = ({ name, cardNumber, month, year, cvc, setName, setCardNumber, setMonth, setYear, setCvc }) => {
     return (
         <main className="flex flex-row justify-center text-center bg-white h-[100vh] w-full">
             <section className="flex flex-row justify-center text-center w-full relative">
