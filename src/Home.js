@@ -84,9 +84,9 @@ const Home = ({ name, cardNumber, month, year, cvc, setCvc, splitCardNumber, han
                 </form>
             </section>
 
-            <section className="absolute ml-[-40%] mt-24 w-[23%]">
+            <section className="absolute ml-[-40%] mt-28 w-[23%]">
                 {/* first card */}
-                <div className="bg-gradient-to-r from-blue-700 from-10% via-pink-400 via-1% to-purple-700 to-4% rounded-lg shadow-md px-10 py-5 ml-[-35%]">
+                <div className="bg-gradient-to-r from-blue-700 from-10% via-pink-400 via-1% to-purple-700 to-4% rounded-lg shadow-md px-10 py-10 ml-[-35%]">
                     {/* top rounded details  */}
                     <div className="flex flex-row place-items-center space-x-4">
                         <div>
@@ -125,7 +125,7 @@ const Home = ({ name, cardNumber, month, year, cvc, setCvc, splitCardNumber, han
                 </div>
 
                 {/* second card */}
-                <div className="bg-gray-200 mt-6 pt-8 rounded-lg shadow-md ml-[-10%] mr-[-28%]">
+                <div className="bg-gray-200 mt-6 pt-8 py-10 rounded-lg shadow-md ml-[-10%] mr-[-28%]">
                     <div className="bg-black h-12 w-full"></div>
                     <div className="bg-gray-400 h-10 w-3/4 mt-6 flex justify-end place-items-center px-2 text-center mx-auto rounded-md text-white">
                         {cvc || (
